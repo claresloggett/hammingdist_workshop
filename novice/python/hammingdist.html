@@ -1745,7 +1745,7 @@ GACTATA
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Hamming distance is the simplest alignment algorithm. It tells us the edit distance between two strings if we&#39;re only allowed to make substitutions - no insertions or deletions.</p>
+<p>Hamming distance is the simplest edit distance algorithm that we looked at for string alignment. It tells us the edit distance between two strings if we&#39;re only allowed to make substitutions - no insertions or deletions.</p>
 </div>
 </div>
 </div>
@@ -3006,6 +3006,111 @@ at least one test is true
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="True-and-False">True and False<a class="anchor-link" href="#True-and-False">&#182;</a></h4>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python has special values called <code>True</code> and <code>False</code>, which are what is returned if we evaluate a comparison. For our first example, we wrote an if statement which looked like</p>
+<pre><code class="language-python">num = <span class="number">37</span>
+<span class="keyword">if</span> num &gt; <span class="number">100</span>:
+    ...
+</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Of course, <code>num</code> was not more than <code>100</code> in this case. What if we look directly at the result of that comparison?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[51]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">num</span> <span class="o">=</span> <span class="mi">37</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+False
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>False</code> is not a string - it&#39;s a special Python value that literally means false, or not true. There&#39;s also <code>True</code>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[52]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">num</span> <span class="o">=</span> <span class="mi">121</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+True
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="challenge">Challenge</h4>
 <ol>
 <li><p>To calculate the Hamming distance, we will need to be able to test if characters are the same. In fact the simplest Hamming distance calculation is between just two characters, for instance:</p>
@@ -3021,34 +3126,6 @@ T
 
 <span class="keyword">print</span> character_distance(<span class="string">"A"</span>, <span class="string">"T"</span>)
 <span class="number">1</span>
-</code></pre>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>XXX TODO: move this, or remove. requires string indexing, conditionals.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p>The first character of a string .. Write a function which takes two arguments and returns True if their third characters are the same, and False if their third characters are different. It should give output like:</p>
-<pre><code class="language-python">same_third_letter(<span class="string">"DIG"</span>, <span class="string">"DOG"</span>)
-<span class="built_in">True</span>
-same_third_letter(<span class="string">"CAT"</span>, <span class="string">"WITNESS"</span>)
-<span class="built_in">True</span>
-same_third_letter(<span class="string">"GATTACA"</span>, <span class="string">"GACTATA"</span>)
-<span class="built_in">False</span>
 </code></pre>
 </li>
 </ol>
@@ -3524,7 +3601,26 @@ so we should always use it when we can.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>XXX: should add a challenge here? Hard to see what.</p>
+<h4 id="challenge-hard-">Challenge (hard)</h4>
+<p>Loops can also be nested: if you put a <code>for</code> loop inside a <code>for</code> loop, every pass through the outer loop will do an entire run-through of all values of the inner loop.</p>
+<p>Using nested loops, write a Python program to write out every two-letter combination of A,C,G and T. The output should look like:</p>
+<pre><code>A A
+A C
+A G
+A T
+C A
+C C
+C G
+C T
+G A
+G C
+G G
+G T
+T A
+T C
+T G
+T T
+</code></pre>
 </div>
 </div>
 </div>
@@ -4200,8 +4296,7 @@ each time the <a href="../../gloss.html#outer-loop">outer loop</a> runs once:</p
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We&#39;ve now seen all the elements we need to write a function to calculate Hamming distance. </p>
-<p>Write a function which takes in two strings as parameters, and returns the Hamming distance between them. You can assume the input strings are the same length.</p>
+<p>\Write a function which takes in two strings as parameters, and returns the Hamming distance between them. You can assume the input strings are the same length.</p>
 </div>
 </div>
 </div>
