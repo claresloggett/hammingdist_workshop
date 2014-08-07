@@ -1691,7 +1691,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For this part of the workshop, we&#39;d like to use your own Research Cloud instance.</p>
-<p>If your computer is Mac or Linux, you can also just use your own computer - on Mac, open the application Terminal. You are now finished setup! You can move to the next document.</p>
+<p>If your computer is Mac or Linux, you can also just use your own computer - on Mac, open the application Terminal. You are now set up! You can optionally now do the <strong>Get the example filesystem</strong>, below (this is recommended).</p>
 <p>If don&#39;t have a working Research Cloud instance <em>and</em> you are on Windows, your options are a bit more complicated - ask a demonstrator for help. It&#39;s possible to install Git Bash and do this workshop that way, but if you are not set up and this is too slow, feel free to just pair up with someone near you instead.</p>
 </div>
 </div>
@@ -1733,7 +1733,22 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you&#39;re able to successfully log in, you&#39;re set up.</p>
+<h3 id="Get-the-example-filesystem">Get the example filesystem<a class="anchor-link" href="#Get-the-example-filesystem">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Once you&#39;re logged into a shell, either on your local computer or your Research Cloud instance, run the following commands:</p>
+<pre><code>git clone https://github.com/claresloggett/hammingdist_workshop -b gh-pages
+</code></pre><p>This will get you the source documents for this workshop, including an example directory structure that you can use in the Unix lessons. If the <code>git</code> command doesn&#39;t work, you are probably on your local computer and don&#39;t have it installed. If you don&#39;t have a Research Cloud instance to use, ask a demonstrator for help. </p>
+<p>Now run:</p>
+<pre><code>cd hammingdist_workshop/filesystem/users/nelle/
+</code></pre><p>This <code>cd</code> command will put you inside the example directory structure and will help make the next lesson more clear.</p>
 </div>
 </div>
 </div>
